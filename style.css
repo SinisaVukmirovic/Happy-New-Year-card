@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Verdana';
+    background: linear-gradient(30deg, #AAA, #3D69AE, #131313);
+    color: #fff;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.container {
+    display: flex;
+    background: url('snow.png') no-repeat;
+    background-position: 0 20%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .decor {
+    position: absolute;
+    left: 7%;
+    top: 40vh;
+    width: 500px;
+    height: auto;
+} */
+
+.animated {
+    font-family: 'Leckerli One', cursive;
+    font-size: 7rem;
+    background: url('text-bg.png') no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: animated-bg 100s linear infinite;
+
+    position: relative;
+}
+
+.animated:before {
+    font-family: 'Verdana';
+    content: "Looking at you, Nemke94!";
+    font-size: .3rem;
+    position: absolute;
+    left: 60px;
+    bottom: 15px;
+    color: #fff;
+}
+
+.animated:after {
+    font-family: 'Leckerli One', cursive;
+    content: "Happy New Year!";
+    font-size: 2.5rem;
+    position: absolute;
+    right: 70px;
+    top: -30px;
+    color: red;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #fff;
+}
+
+@keyframes animated-bg {
+    0% {
+        background-position: 0% 30%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Media Queries for smaller screens */
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    html {
+        font-size: 10px;
+    }
+
+    .animated:before {
+        font-size: .5rem;
+        left: 30px;
+        bottom: 0;
+    }
+
+    .animated:after {
+        font-size: 3.2rem;
+        right: 40px;
+        top: -30px;
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 767px) {
+    html {
+        font-size: 8px;
+    }
+
+    .animated:before {
+        font-size: .6rem;
+        left: 30px;
+        bottom: 0;
+    }
+
+    .animated:after {
+        font-size: 3.2rem;
+        right: 40px;
+        top: -30px;
+    }
+}
+
+@media screen and (min-width: 20px) and (max-width: 413px) {
+    html {
+        font-size: 6px;
+    }
+
+    .animated:before {
+        font-size: .7rem;
+        left: 20px;
+        bottom: 0;
+    }
+
+    .animated:after {
+        font-size: 3rem;
+        right: 40px;
+        top: -30px;
+    }
+}
